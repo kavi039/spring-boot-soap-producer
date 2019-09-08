@@ -1,0 +1,117 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://spring.io/guides/gs-producing-web-service"
+           targetNamespace="http://spring.io/guides/gs-producing-web-service" elementFormDefault="qualified">
+  <xs:element name="param0">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Request">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Header">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="Country"/>
+                    <xs:element type="xs:string" name="ChannelId"/>
+                    <xs:element type="xs:string" name="ChannelUserId"/>
+                    <xs:element type="xs:int" name="TxnDate"/>
+                    <xs:element type="xs:int" name="TxnTime"/>
+                    <xs:element type="xs:int" name="TxnRefNum"/>
+                    <xs:element type="xs:string" name="ServiceId"/>
+                    <xs:element type="xs:string" name="ChannelType"/>
+                    <xs:element type="xs:byte" name="VersionNum"/>
+                    <xs:element type="xs:short" name="BrCode"/>
+                    <xs:element type="xs:string" name="HostUserId"/>
+                    <xs:element type="xs:string" name="MachineId"/>
+                    <xs:element type="xs:string" name="MachineRef"/>
+                    <xs:element type="xs:string" name="ModuleId"/>
+                    <xs:element type="xs:string" name="BatchId"/>
+                    <xs:element type="xs:string" name="ContinueOnError"/>
+                    <xs:element type="xs:string" name="IsOnline"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="DataBlock">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="MOBENQ">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Data">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:int" name="TelNum"/>
+                                <xs:element type="xs:string" name="ServiceProvider"/>
+                                <xs:element type="xs:string" name="ActionId"/>
+                                <xs:element type="xs:string" name="ContractType"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+ <xs:element name="Reply">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Header">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="Country"/>
+                    <xs:element type="xs:string" name="ChannelId"/>
+                    <xs:element type="xs:string" name="ChannelUserId"/>
+                    <xs:element type="xs:int" name="TxnDate"/>
+                    <xs:element type="xs:int" name="TxnTime"/>
+                    <xs:element type="xs:int" name="TxnRefNum"/>
+                    <xs:element type="xs:string" name="ServiceId"/>
+                    <xs:element type="xs:string" name="ChannelType"/>
+                    <xs:element type="xs:byte" name="VersionNum"/>
+                    <xs:element type="xs:short" name="BrCode"/>
+                    <xs:element type="xs:string" name="HostUserId"/>
+                    <xs:element type="xs:string" name="MachineId"/>
+                    <xs:element type="xs:string" name="MachineRef"/>
+                    <xs:element type="xs:string" name="ModuleId"/>
+                    <xs:element type="xs:string" name="BatchId"/>
+                    <xs:element type="xs:string" name="ContinueOnError"/>
+                    <xs:element type="xs:string" name="IsOnline"/>
+                    <xs:element type="xs:string" name="HostStatus"/>
+                    <xs:element type="xs:string" name="HostResponseCode"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="DataBlock">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="MOBENQ">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Data">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:int" name="TelNum"/>
+                                <xs:element type="xs:string" name="ServiceProvider"/>
+                                <xs:element type="xs:string" name="ActionId"/>
+                                <xs:element type="xs:string" name="ContractType"/>
+                                <xs:element type="xs:string" name="Status"/>
+                                <xs:element type="xs:string" name="RespStatus"/>
+                                <xs:element type="xs:string" name="RespCode"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

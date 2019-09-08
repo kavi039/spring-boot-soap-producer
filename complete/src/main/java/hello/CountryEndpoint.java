@@ -6,8 +6,7 @@ import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
 import org.springframework.ws.server.endpoint.annotation.RequestPayload;
 import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
 
-import io.spring.guides.gs_producing_web_service.GetCountryRequest;
-import io.spring.guides.gs_producing_web_service.GetCountryResponse;
+import io.spring.guides.gs_producing_web_service.Param0;
 
 @Endpoint
 public class CountryEndpoint {
@@ -20,12 +19,16 @@ public class CountryEndpoint {
 		this.countryRepository = countryRepository;
 	}
 
-	@PayloadRoot(namespace = NAMESPACE_URI, localPart = "getCountryRequest")
+	@PayloadRoot(namespace = NAMESPACE_URI, localPart = "param0")
 	@ResponsePayload
-	public GetCountryResponse getCountry(@RequestPayload GetCountryRequest request) {
-		GetCountryResponse response = new GetCountryResponse();
-		response.setCountry(countryRepository.findCountry(request.getName()));
+	public Param0 getCountry(@RequestPayload Param0 request) {
+//		Param0 response = new Param0();
+		System.out.println("..............................."
+				+ request.getRequest().getDataBlock().getMOBENQ().getData().getActionId());
 
-		return response;
+		// response.getReply().getDataBlock().getMOBENQ().getData().setServiceProvider("adgjgef");
+		// response.setReply(countryRepository.findCountry("Spain"));
+
+		return request;
 	}
 }
