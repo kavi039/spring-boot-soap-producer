@@ -6,8 +6,7 @@ import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
 import org.springframework.ws.server.endpoint.annotation.RequestPayload;
 import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
 
-import io.spring.guides.gs_producing_web_service.Param0;
-import io.spring.guides.gs_producing_web_service.Param0.Reply;
+import hello.Param0.Reply;
 
 @Endpoint
 public class CountryEndpoint {

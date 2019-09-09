@@ -3,15 +3,18 @@
 		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>org.springframework</groupId>
-	<artifactId>gs-producing-web-service</artifactId>
-	<version>0.1.0</version>
-
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.1.6.RELEASE</version>
 	</parent>
+	
+	<groupId>org.springframework</groupId>
+	<artifactId>gs-producing-web-service</artifactId>
+	<packaging>war</packaging>
+	<version>0.1.0</version>
+		<name>SoapProducer</name>
+	<description>Spring Boot soap producer</description>
 
     <properties>
         <java.version>1.8</java.version>
@@ -37,13 +40,13 @@
 
 	<build>
 		<plugins>
-			<plugin>
+<!-- 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
+			</plugin> -->
 
 			<!-- tag::xsd[] -->
-			<plugin>
+<!-- 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>jaxb2-maven-plugin</artifactId>
 				<version>2.5.0</version>
@@ -61,8 +64,8 @@
 					</sources>
 				</configuration>
 			</plugin>
-			<!-- end::xsd[] -->
-		</plugins>
+			end::xsd[]-->
+		</plugins> 
 	</build>
 
 </project>
